@@ -8,10 +8,10 @@ public class PlayerController : MonoBehaviour
 {
 
    // Variables related to player character movement
-  public InputAction MoveAction;
-  Rigidbody2D rigidbody2d;
-Vector2 move;
-  public float speed = 3.0f;
+   public InputAction MoveAction;
+   Rigidbody2D rigidbody2d;
+   Vector2 move;
+   public float speed = 3.0f;
 
 
   // Variables related to the health system
@@ -27,28 +27,13 @@ Vector2 move;
      MoveAction.Enable();
      rigidbody2d = GetComponent<Rigidbody2D>();
 
-    currentHealth = maxHealth;
+    currentHealth = 1;
   }
  
   // Update is called once per frame
   void Update()
-  {
-    float horizontal = 0.0f;
+   {
       move = MoveAction.ReadValue<Vector2>();
-      if (Keyboard.current.leftArrowKey.isPressed)
-         {
-
-          horizontal = -1.0f;
-
-         } 
-         else if (Keyboard.current.rightArrowKey.isPressed)
-{
-
-horizontal = 1.0f;
-
-}
-
-   
    }
 
 
@@ -65,6 +50,7 @@ horizontal = 1.0f;
   public void ChangeHealth (int amount)
   {
      currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+     UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
      Debug.Log(currentHealth + "/" + maxHealth);
   }
 
