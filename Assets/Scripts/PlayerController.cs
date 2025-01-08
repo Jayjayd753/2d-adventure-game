@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
 
+     
+
    // Variables related to player character movement
    public InputAction MoveAction;
    Rigidbody2D rigidbody2d;
@@ -20,15 +22,21 @@ public class PlayerController : MonoBehaviour
   public int health { get { return currentHealth; }}
 
 
+ //Variables for Player Animation
+ Animator animator;
+ //Vector2
+
 
   // Start is called before the first frame update
   void Start()
   {
      MoveAction.Enable();
      rigidbody2d = GetComponent<Rigidbody2D>();
-
+    animator = GetComponent<Animator>();
     currentHealth = 1;
-  }
+   }
+
+
  
   // Update is called once per frame
   void Update()
