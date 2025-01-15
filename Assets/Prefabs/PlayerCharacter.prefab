@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9091341782979916484}
   - component: {fileID: 8969297260514344364}
   - component: {fileID: 8743389124626578986}
+  - component: {fileID: 989558336736084559}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -97,95 +98,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c9cdd22a567489fb06c5111617908b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAction:
+  MoveAction:
     m_Name: Move
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: b40bb2d1-c894-4f60-bec2-12a581fdd3a0
+    m_Id: d86c0aa8-aba7-454b-acb0-1c21feee5d72
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: aa90aba8-c661-44b0-814a-dfef475313c9
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 4
-    - m_Name: up
-      m_Id: 300c7cf5-ca46-4826-bf10-f1aad524db20
-      m_Path: <Keyboard>/upArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: down
-      m_Id: be43713e-ab81-43f4-95e9-e53ad501e529
-      m_Path: <Keyboard>/downArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 715691e7-03ef-4062-b3ef-70543e0cef38
-      m_Path: <Keyboard>/leftArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 99a25fbb-7e0b-4c1c-ba35-d126ec0fecb4
-      m_Path: <Keyboard>/rightArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: 2D Vector
-      m_Id: c2e106ad-bbc3-42d6-bb3c-0f0549683d9d
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 4
-    - m_Name: up
-      m_Id: 9383a129-f952-495e-b8ba-7d20099ff5fd
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 774d8fec-d239-41c4-8c88-f7bc211193ac
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: left
-      m_Id: c987e557-5239-41a0-85b2-c588aaa024c0
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 6c2f497f-6b90-43ac-a10a-0b94dd918063
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
+    m_SingletonActionBindings: []
     m_Flags: 0
+  speed: 3
   maxHealth: 5
 --- !u!50 &8969297260514344364
 Rigidbody2D:
@@ -234,3 +156,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.22, y: 0.85145926}
   m_EdgeRadius: 0
+--- !u!95 &989558336736084559
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091341782979916487}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
